@@ -1,0 +1,109 @@
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="baidu-site-verification" content="AAxaXuMxjf" />
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: digital-7_mono.ttf format("truetype");
+		}
+	</style>
+	<link type="text/css" rel="stylesheet" href="default.css" >
+    <script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="garden.js" ></script>
+    <script type="text/javascript" src="functions.js" ></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* 我们以一种不同寻常的方式相遇.</span><br />
+				<span class="space"/><span class="comments">* 因此，我写了下面的代码来纪念我们的故事.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"男孩名字"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"女孩名字"</span>);<br />
+				<span class="comments">// Dec,2017,I meet you. </span><br />
+				i.meet(u);<br />
+				<span class="comments">// 慢慢地我喜欢你,我发现你是我要找的女孩. </span><br />
+				i.girl = u;<br />
+				<span class="comments">// 但是我们年级相隔了一届. </span><br />
+				u.grade != i.grade;<br />
+				<span class="comments">// 因为年级的问题我们注定会分割一段时间. </span><br />
+                u.grade - i.grade = -1;<br/>
+                Time = 365 > 1 ? true:false;<br/>
+                <span class="comments">// 但是这应该对于我们两个人不构成严重的问题.</span><br />
+                in_array(u,i.heart) = in_array(i,u.heart) = true;<br/>
+                <span class="comments">// 因此我决定我要向你表白，我肯定要主动嘛</span><br/>
+				if(u.love === i){<br />
+				<span class="placeholder"/>i.stay = xxx;<br />
+                <span class="comments">// 我们可以享受很多美好的时光，^-^ --- ^-^ </span><br/>
+				<span class="placeholder"/>Love  = u & i;<br />
+                <span class="comments">// 我们一起规划美好生活的未来.</span><br/>
+				<span class="placeholder"/>We.life = u.idea & i.idea;<br />
+				<span class="comments">// 照顾好你和我们的爱.</span><br />
+				<span class="placeholder"/>i.takeCareOf(u);<br />
+				<span class="comments">// 在一场浪漫的婚礼之后，我们将从此过上幸福的生活.</span><br />
+				<span class="placeholder"/>i.marry(u);<br />
+				<span class="placeholder"/>i.liveHappilyTime(u);<br />
+				}else{<br />
+				<span class="placeholder"/>i.goto = YourHeart;<br />
+				}<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						女孩名字, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- 女孩名字</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Copyright @ 2018 女孩名字
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2017, 12, 5);
+		together.setHours(10);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
